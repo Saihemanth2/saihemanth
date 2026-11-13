@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sri Laxmi Engineering Center, MG Road, Medak. Serving customers since 1988.">
+  <title>Sri Laxmi Engineering Center | Medak</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{--navy:#10243a;--blue:#1769aa;--cyan:#39b7c9;--ink:#182638;--muted:#657487;--light:#f3f7fa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 40px));margin:auto}.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 2px 18px rgba(16,36,58,.06)}
+    .nav-wrap{min-height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;color:var(--navy);line-height:1.15}
+    .brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;color:white;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--cyan))}
+    .brand strong{display:block;font:800 17px Manrope,sans-serif}.brand small{display:block;margin-top:4px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:32px;font-size:14px;font-weight:600}nav a:hover{color:var(--blue)}.menu-toggle{display:none;border:0;background:none;font-size:26px;color:var(--navy);cursor:pointer}
+    .hero{min-height:590px;position:relative;overflow:hidden;display:flex;align-items:center;color:white;background:linear-gradient(115deg,#0e2238 0%,#123e63 60%,#176d91 100%)}
+    .hero-content{position:relative;z-index:2;padding:70px 0 90px}.eyebrow{margin:0 0 14px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .hero h1,h2{margin:0;font:800 clamp(38px,6vw,66px)/1.12 Manrope,sans-serif;letter-spacing:-.04em}.hero h1 span{color:#6bd4df}
+    .hero-copy{max-width:540px;margin:24px 0 30px;color:#d5e2ed;font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:13px}
+    .btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 22px;border-radius:7px;font-size:14px;font-weight:700;transition:transform .2s}.btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--cyan);color:#08243a}.btn-outline{border:1px solid rgba(255,255,255,.5);color:white}
+    .hero-shape{position:absolute;border:1px solid rgba(255,255,255,.12);border-radius:50%}.shape-one{width:560px;height:560px;right:-80px;top:30px;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.02)}
+    .shape-two{width:280px;height:280px;right:60px;top:170px;background:linear-gradient(145deg,rgba(57,183,201,.22),rgba(23,105,170,.04))}
+    .since-note{position:absolute;right:5%;bottom:55px;display:flex;align-items:center;gap:12px;color:#d5e2ed}.since-note span{font:800 35px Manrope,sans-serif;color:#70d8df}
+    .since-note small{font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.08em}
+    .trust-strip{background:white;box-shadow:0 12px 35px rgba(16,36,58,.06)}.trust-inner{display:grid;grid-template-columns:repeat(3,1fr);padding:25px 0}
+    .trust-inner div{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid #e5ebf0}.trust-inner div:last-child{border:0}
+    .trust-inner strong{color:var(--blue);font:800 21px Manrope,sans-serif}.trust-inner span{color:var(--muted);font-size:12px}
+    .section{padding:100px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    h2{font-size:clamp(32px,4vw,46px);color:var(--navy)}.accent{color:var(--blue)}.about-copy{color:var(--muted);font-size:16px}
+    .services-section{background:var(--light)}.section-heading{max-width:650px;margin:0 auto 45px;text-align:center}.section-heading h2{font-size:42px}.section-heading>p:last-child{color:var(--muted)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service-card{padding:32px 28px;background:white;border:1px solid #e8eef3;border-radius:12px;box-shadow:0 10px 30px rgba(16,36,58,.04);transition:transform .2s,box-shadow .2s}
+    .service-card:hover{transform:translateY(-5px);box-shadow:0 16px 35px rgba(16,36,58,.09)}.card-icon{width:52px;height:52px;display:grid;place-items:center;margin-bottom:22px;border-radius:12px;background:#e7f6f8;color:var(--blue);font-size:25px}
+    .service-card h3{margin:0 0 10px;color:var(--navy);font:700 19px Manrope,sans-serif}.service-card p{margin:0;color:var(--muted);font-size:14px}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.contact-intro{color:var(--muted);margin:20px 0}
+    .phone-list{display:grid;gap:10px;max-width:370px}.phone-list a{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border:1px solid #e5ebf0;border-radius:8px}
+    .phone-list a:hover{border-color:var(--cyan);background:#f7fcfd}.phone-list span{color:var(--muted);font-size:13px}.phone-list strong{color:var(--blue);font-size:16px}
+    .address-card{padding:38px;border-radius:14px;color:white;background:linear-gradient(145deg,#10243a,#174f70);box-shadow:0 20px 45px rgba(16,36,58,.16)}
+    .map-pin{color:#70d8df;font-size:34px}.address-card h3{margin:12px 0;font:700 22px Manrope,sans-serif}.address-card p{color:#d3e0e9;line-height:1.8}.map-link{margin-top:14px}
+    footer{background:#0b1b2c;color:#aab9c6;font-size:12px}.footer-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .floating-call{position:fixed;z-index:9;right:22px;bottom:22px;width:54px;height:54px;display:grid;place-items:center;border-radius:50%;background:var(--cyan);color:#08243a;font-size:23px;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+    @media(max-width:760px){.menu-toggle{display:block}nav{display:none;position:absolute;top:78px;left:0;right:0;padding:18px 25px 24px;flex-direction:column;align-items:flex-start;gap:17px;background:white;box-shadow:0 12px 18px rgba(16,36,58,.08)}nav.open{display:flex}
+      .hero{min-height:570px}.hero-content{padding:65px 0 115px}.shape-one{right:-330px}.shape-two{right:-180px}.since-note{right:22px;bottom:28px}
+      .trust-inner{gap:15px}.trust-inner div{flex-direction:column;gap:0;text-align:center}.trust-inner strong{font-size:18px}.trust-inner span{font-size:10px}
+      .section{padding:70px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.service-grid{grid-template-columns:1fr}.section-heading h2{font-size:34px}
+      .address-card{padding:28px}.footer-inner{padding:15px 0;flex-direction:column;justify-content:center;gap:0;text-align:center}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home"><span class="brand-mark">SL</span><span><strong>Sri Laxmi</strong><small>Engineering Center</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Products &amp; Services</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <p class="eyebrow">Serving Medak since 1988</p>
+        <h1>Sri Laxmi<br><span>Engineering Center</span></h1>
+        <p class="hero-copy">Your local engineering center on MG Road, Medak. Get in touch with our team for product and service enquiries.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#contact">Contact Us</a><a class="btn btn-outline" href="tel:+918919200344">Call 8919200344</a></div>
+        <div class="since-note"><span>1988</span><small>Established<br>in Medak</small></div>
+      </div>
+      <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+    </section>
+    <section class="trust-strip"><div class="container trust-inner"><div><strong>1988</strong><span>Established</span></div><div><strong>Medak</strong><span>MG Road location</span></div><div><strong>3</strong><span>Contact numbers</span></div></div></section>
+    <section class="section" id="about"><div class="container about-grid">
+      <div><p class="eyebrow">About our business</p><h2>A trusted local name<br>since <span class="accent">1988</span></h2></div>
+      <div class="about-copy"><p>Sri Laxmi Engineering Center is located on MG Road, near Indian Bank, Medak – 502110. Established in 1988, the center has a long-standing presence in the local community.</p><p>For information about available products, services, and enquiries, please contact us directly by phone.</p></div>
+    </div></section>
+    <section class="section services-section" id="services"><div class="container">
+      <div class="section-heading"><p class="eyebrow">How we can help</p><h2>Products &amp; Services</h2><p>Contact the store to confirm current stock, product details, and service availability.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="card-icon">⚙</div><h3>Engineering Products</h3><p>Ask our team about engineering-related products and available options.</p></article>
+        <article class="service-card"><div class="card-icon">🔧</div><h3>Tools &amp; Equipment</h3><p>Call to enquire about tools, equipment, and product specifications.</p></article>
+        <article class="service-card"><div class="card-icon">☎</div><h3>Customer Enquiries</h3><p>Speak with us for assistance, availability, and general enquiries.</p></article>
+      </div>
+    </div></section>
+    <section class="section" id="contact"><div class="container contact-grid">
+      <div><p class="eyebrow">Get in touch</p><h2>Visit us or<br><span class="accent">give us a call.</span></h2><p class="contact-intro">We welcome your enquiries. Please call one of the numbers below.</p>
+        <div class="phone-list"><a href="tel:+918919200344"><span>Phone 1</span><strong>8919200344</strong></a><a href="tel:+919392079056"><span>Phone 2</span><strong>9392079056</strong></a><a href="tel:+918247379977"><span>Phone 3</span><strong>8247379977</strong></a></div>
+      </div>
+      <div class="address-card"><div class="map-pin">⌖</div><h3>Sri Laxmi Engineering Center</h3><p>MG Road, Near Indian Bank,<br>Medak – 502110,<br>Telangana, India</p><a class="btn btn-primary map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sri+Laxmi+Engineering+Center+MG+Road+near+Indian+Bank+Medak+502110" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><p>© <span id="year"></span> Sri Laxmi Engineering Center</p><p>MG Road, Medak · Serving since 1988</p></div></footer>
+  <a class="floating-call" href="tel:+918919200344" aria-label="Call Sri Laxmi Engineering Center">☎</a>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
